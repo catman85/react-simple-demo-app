@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-simple-demo-app/static/css/main.29427922.chunk.css",
+    "main.js": "/react-simple-demo-app/static/js/main.13512e3d.chunk.js",
+    "main.js.map": "/react-simple-demo-app/static/js/main.13512e3d.chunk.js.map",
+    "runtime-main.js": "/react-simple-demo-app/static/js/runtime-main.aa92915f.js",
+    "runtime-main.js.map": "/react-simple-demo-app/static/js/runtime-main.aa92915f.js.map",
+    "static/js/2.7aef4992.chunk.js": "/react-simple-demo-app/static/js/2.7aef4992.chunk.js",
+    "static/js/2.7aef4992.chunk.js.map": "/react-simple-demo-app/static/js/2.7aef4992.chunk.js.map",
+    "static/js/3.bd63bb6d.chunk.js": "/react-simple-demo-app/static/js/3.bd63bb6d.chunk.js",
+    "static/js/3.bd63bb6d.chunk.js.map": "/react-simple-demo-app/static/js/3.bd63bb6d.chunk.js.map",
+    "index.html": "/react-simple-demo-app/index.html",
+    "static/css/main.29427922.chunk.css.map": "/react-simple-demo-app/static/css/main.29427922.chunk.css.map",
+    "static/js/2.7aef4992.chunk.js.LICENSE.txt": "/react-simple-demo-app/static/js/2.7aef4992.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa92915f.js",
+    "static/js/2.7aef4992.chunk.js",
+    "static/css/main.29427922.chunk.css",
+    "static/js/main.13512e3d.chunk.js"
+  ]
+}
