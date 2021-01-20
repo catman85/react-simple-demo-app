@@ -11,7 +11,7 @@ class Product extends React.Component {
                 {el.name}
                 <b>{" "+el.price}</b><br/>
                 {el.description}<br/>
-                <img src={el.image}/>
+                <img src={el.image} alt={el.name}/>
             </li>
        )
     }
