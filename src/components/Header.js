@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Link
+  } from "react-router-dom";
 
 class Header extends React.Component {
     constructor(props){
@@ -7,9 +10,9 @@ class Header extends React.Component {
     render(){
         return (
             <div>
-            <h3>DIMITRIS VASILIADIS</h3>
-            <input/><br/>
-            <button>Search</button>
+            <h3><Link to="/">DIMITRIS VASILIADIS</Link></h3>
+            <input onChange={this.props.callback} /><br/>
+            <Link to="/search"><button>Search</button></Link>
             </div>
        )
     }
