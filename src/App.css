@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.split{
+  display: flex;
+}
+
+.split > div {
+  flex: 50%;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

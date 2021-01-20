@@ -1,6 +1,8 @@
-import logo from './logo.svg';
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import MainMenu from './components/MainMenu';
+import SideMenu from './components/SideMenu';
 import * as api_config from "./api";
 
 class App extends React.Component {
@@ -9,6 +11,7 @@ class App extends React.Component {
     this.state = {
       categories: [],
       products: [],
+      selectedCategory: ""
     };
     this.fetchData = this.fetchData.bind(this);
   }
@@ -17,39 +20,33 @@ class App extends React.Component {
     fetch(api_config.url + "/categories", api_config.settings)
       .then((res) => res.json())
       .then((data) => {
-        this.setState(() => ({categories: data}))
+        this.setState({categories: data})
       });
 
     fetch(api_config.url + "/products", api_config.settings)
       .then((res) => res.json())
       .then((data) => {
-        this.setState({
-          products: data,
-        });
-        console.log(this.state.products)
+        this.setState({products: data});
       });
   }
 
   componentWillMount() {
     this.fetchData()
   }
+
+  sideMenuCallback(id){
+    this.setState({selectedCategory: id});
+    console.debug(this.state.selectedCategory, id);
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header/>
+        <div className="split">
+          <SideMenu categories={this.state.categories} callback={this.sideMenuCallback.bind(this)}/>
+          <MainMenu products={this.state.products} category={this.state.selectedCategory}/>
+        </div>
       </div>
     );
   }
