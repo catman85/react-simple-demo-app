@@ -1,4 +1,5 @@
 import React from 'react';
+import Product from '../components/Product';
 
 class Search extends React.Component {
     constructor(props){
@@ -21,9 +22,7 @@ class Search extends React.Component {
                 {this.props.products
                 .filter(p => this.checkValidity(p))
                 .map((el)=>
-                    <li key={el.id}>
-                        {el.name}
-                    </li>
+                    <Product prod={el}/>
                 )}
             </div>
        )

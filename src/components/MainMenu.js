@@ -1,4 +1,5 @@
 import React from 'react';
+import Product from './Product';
 
 class MainMenu extends React.Component {
     constructor(props){
@@ -61,12 +62,7 @@ class MainMenu extends React.Component {
                 })
                 .filter(p => (p.categoryId === this.props.category || this.props.category === ""))
                 .map((el)=>
-                    <li key={el.id} style={{marginBottom: "1em"}}>
-                        {el.name}
-                        <b>{" "+el.price}</b><br/>
-                        {el.description}<br/>
-                        <img src={el.image}/>
-                    </li>
+                    <Product prod={el}/>
                 )}
             </div>
        )
