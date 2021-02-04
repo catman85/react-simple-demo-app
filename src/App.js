@@ -20,25 +20,16 @@ class App extends React.Component {
       selectedCategory: "",
       searchQuery: ""
     };
-    this.fetchData = this.fetchData.bind(this);
-  }
-
-  fetchData() {
-    fetch(api_config.url + "/categories", api_config.settings)
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({categories: data})
-      });
-
-    fetch(api_config.url + "/products", api_config.settings)
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({products: data});
-      });
   }
 
   componentDidMount() {
-    this.fetchData()
+    ["categories","products"].forEach(el => {
+      fetch(api_config.url + "/" + el, api_config.settings)
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({[el]: data})
+      });
+    });
   }
 
   sideMenuCallback(id){
